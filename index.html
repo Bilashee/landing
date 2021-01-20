@@ -5,46 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7cb730151f.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/gucci.png" type="image/x-icon">
+
     <title>Penguin Fashion</title>
 </head>
 
 <body>
     <header>
         <section class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img id="header-img" style="width: 100%;" src="images/header-img.png" alt="Penguin"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Product</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Contact us</a>
-                            </li>
-                        </ul>
-                    </div>
+            <nav class="navbar">
+                <div class="brand-title"><img src="images/header-img.png" alt="Penguin"></div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
                 </div>
             </nav>
         </section>
-        <section>
+        <section id="top-section">
             <div class="row d-flex align-items-center p-5">
                 <div class="col-md-7">
                     <h1><span class="highlight">BE THE PENGUINS</span></h1>
                     <h1>OF WINTER</h1>
-                    <p>A full stack all around designer that placerat in massa consectetur</p>
+                    <p>
+                        A web developer is a programmer who specializes in, or is specifically engaged in, the development of World Wide Web applications using a client–server model.</p>
                     <a target="_blank" href="#" class="btn link-button"><i class="fas fa-shopping-cart"></i> Buy Now</a>
                 </div>
                 <div class="col-md-5">
@@ -129,19 +125,19 @@
         <section class="row d-flex align-items-center p-3">
             <div class="col-md-6">
                 <div class="user-interface shadow-lg   bg-white rounded">
-                    <img src="images/bottom-1.png" style="width: 50px;float: left;" alt="V">
+                    <img src="images/bottom-1.png" style="width: 80px;float: left;" alt="V">
                     <h4>Find the Perfect Fit</h4>
-                    <p>Everybody is different and exclusive.</p>
+                    <p>Everybody is different,which is why we offer styles for every body.</p>
                 </div>
                 <div class="user-interface shadow-lg  bg-white rounded">
-                    <img src="images/bottom-2.png" style="width: 50px;float: left;" alt="V">
+                    <img src="images/bottom-2.png" style="width: 80px;float: left;" alt="V">
                     <h4>Free Exchanges</h4>
-                    <p>Everybody is different and exclusive.</p>
+                    <p>Everybody is different,which is why we offer styles for every body.</p>
                 </div>
                 <div class="user-interface shadow-lg  bg-white rounded">
-                    <img src="images/bottom-3.png" style="width: 50px;float: left;" alt="V">
+                    <img src="images/bottom-3.png" style="width: 80px;float: left;" alt="V">
                     <h4>Contact Our Seller</h4>
-                    <p>Everybody is different and exclusive.</p>
+                    <p>Everybody is different,which is why we offer styles for every body.</p>
                 </div>
             </div>
             <div class="col-md-6 mt-5">
@@ -150,7 +146,8 @@
             </div>
         </section>
         <section class="mt-5">
-            <div id="input">
+            <div id="input" class="shadow-lg  bg-white rounded">
+                <h3>Register</h3>
                 <form action="/action_page.php">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -172,6 +169,14 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
+    </script>
 </body>
 
 </html>

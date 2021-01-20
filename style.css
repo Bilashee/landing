@@ -1,19 +1,93 @@
  body {
      overflow-x: hidden;
+     box-sizing: border-box;
  }
  
  header {
      background-color: #FFFBF0;
  }
  
+ .navbar {
+     display: flex;
+     position: relative;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #FFFBF0;
+     color: black;
+     padding-top: 25px;
+ }
+ 
+ .brand-title {
+     margin: .5rem;
+ }
+ 
+ .navbar-links {
+     height: 100%;
+ }
+ 
+ .navbar-links ul {
+     display: flex;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .navbar-links li {
+     list-style: none;
+ }
+ 
+ .navbar-links li a {
+     display: block;
+     text-decoration: none;
+     color: black;
+     padding: 1rem;
+     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.558);
+ }
+ 
+ .toggle-button {
+     position: absolute;
+     top: 2.8rem;
+     right: 1rem;
+     display: none;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 30px;
+     height: 24px;
+ }
+ 
+ .toggle-button .bar {
+     height: 4px;
+     width: 100%;
+     background-color: black;
+     border-radius: 10px;
+ }
+ 
+ #top-section {
+     margin-top: -50px;
+ }
+ 
  h1 {
-     font-size: 40px;
+     font-size: 80px;
      color: #363958;
      line-height: 1.1;
+     font-family: 'Bebas Neue', cursive;
+ }
+ 
+ h4,
+ h5 {
+     color: #363958;
+ }
+ 
+ p {
+     font-size: 17px;
+     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.358);
  }
  
  .highlight {
      color: #FABE4C;
+ }
+ 
+ #top-section p {
+     width: 70%;
  }
  
  .link-button {
@@ -77,12 +151,16 @@
  
  .user-interface img {
      margin-right: 20px;
-     clear: both;
  }
  
  .user-interface p {
-     width: 80%;
-     display: block;
+     width: 90%;
+ }
+ 
+ h3 {
+     text-align: center;
+     color: #A4BC46;
+     font-family: 'Bebas Neue', cursive;
  }
  
  input[type=text],
@@ -119,8 +197,8 @@
  }
  
  input[type=search] {
-     background-image: url('img/searchicon.png');
-     background-position: 1px 7px;
+     background-image: url('images/searchicon.jpg');
+     background-position: -10px -10px;
      background-repeat: no-repeat;
      width: 100%;
  }
@@ -133,8 +211,7 @@
  #input {
      width: 80%;
      border-radius: 5px;
-     background-color: #f2f2f2;
-     padding: 20px;
+     padding: 50px;
      margin: auto;
  }
  
@@ -156,8 +233,61 @@
      color: #A4BC46;
  }
  
+ @media screen and (max-width: 1000px) {
+     .navbar {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+     .toggle-button {
+         display: flex;
+     }
+     .navbar-links {
+         display: none;
+         width: 100%;
+     }
+     .navbar-links ul {
+         width: 100%;
+         flex-direction: column;
+     }
+     .navbar-links ul li {
+         text-align: justify;
+     }
+     .navbar-links ul li a {
+         padding: .5rem 1rem;
+     }
+     .navbar-links.active {
+         display: flex;
+     }
+ }
+ 
+ @media screen and (max-width:780px) {
+     h1 {
+         font-size: 50px;
+     }
+     .navbar-links ul {
+         margin-left: 20px;
+     }
+     .brand-title img {
+         margin-left: 25px;
+     }
+ }
+ 
  @media screen and (max-width:480px) {
      #cards h1 {
          text-align: center !important;
+     }
+     .toggle-button {
+         top: 2.4rem;
+     }
+     #input {
+         width: 95%;
+         padding: 20px;
+     }
+     #top-section {
+         margin-top: -30px;
+     }
+     .brand-title img {
+         width: 74%;
+         margin-left: 20px;
      }
  }
